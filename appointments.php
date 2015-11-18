@@ -1,5 +1,9 @@
 <?php
-    include_once "includes/connect.php";
+include 'includes/connect.php';
+//$query =   mysqli_query("SELECT * FROM `content` WHERE 1");
+//$fetch = mysql_fetch_array($query);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -183,6 +187,7 @@ return;
         	<h2 class="title-grp"><span>make</span>appointments</h2>
         </div><!-- /col-sm-12 -->
 		<div id="map" style = "height: 500px;    width: 1000px; margin-bottom:20px;"></div>
+        <div style = "height: 100px;    width: 1000px;"><?php echo $result;?></div>
 
 
         <div class="col-sm-6 appointments">
