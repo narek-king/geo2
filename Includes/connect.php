@@ -15,7 +15,3 @@ mysql_select_db("kingam_geo") or die(mysql_error());
  */
 $db = new PDO('mysql:host=localhost; dbname=kingam_geo; charset=utf8', 'kingam_narek', '!Mh46PTifpT[');
 
-$query = $db->query('SELECT * FROM `content` WHERE 1');
-
-$row = $query->fetch(PDO::FETCH_ASSOC);
-$result = $row['lat-lng'];
