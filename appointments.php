@@ -3,6 +3,11 @@ include 'includes/connect.php';
 //$query =   mysqli_query("SELECT * FROM `content` WHERE 1");
 //$fetch = mysql_fetch_array($query);
 
+$result = '';
+foreach ($db->query('SELECT * FROM `content` WHERE 1') as $row){
+$result .=  $row['lat-lng'];
+$result .= ', ';
+}
 
 ?>
 
@@ -37,6 +42,7 @@ include 'includes/connect.php';
 
 <script type="text/javascript" src="validation.js"></script>
 <script type="text/javascript">
+
 "use strict";
 function sendContact() {
 
@@ -362,6 +368,8 @@ var pos;
 var map;
 var infoWindow2;
 var marker;
+var hospitals = JSON.parse(<? echo $result;?>);
+console.log(hospitals);
 function initMap() {
 	
    map = new google.maps.Map(document.getElementById('map'), {
